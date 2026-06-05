@@ -24,35 +24,40 @@ LATIHAN = {
             'detail': '4 set × 8-10 rep',
             'muscle': 'Dada',
             'tips': 'Punggung rata di bangku. Turunkan bar ke dada perlahan, dorong eksplosif ke atas. Siku 45° dari badan.',
-            'foto': 'https://www.inspireusafoundation.org/wp-content/uploads/2022/06/barbell-bench-press.gif'
+            'foto': 'https://i.imgur.com/bench_press.jpg',
+            'video': 'https://www.youtube.com/shorts/KwRRhpHiKAg'
         },
         {
             'nama': 'Overhead Press',
             'detail': '3 set × 8-10 rep',
             'muscle': 'Bahu',
             'tips': 'Berdiri tegak, core kencang. Dorong bar lurus ke atas sampai lengan ekstensi penuh.',
-            'foto': 'https://www.inspireusafoundation.org/wp-content/uploads/2022/06/barbell-overhead-press.gif'
+            'foto': 'https://i.imgur.com/overhead_press.jpg',
+            'video': 'https://www.youtube.com/shorts/qqMjmHkJXvg'
         },
         {
             'nama': 'Incline Dumbbell Press',
             'detail': '3 set × 10-12 rep',
             'muscle': 'Dada Atas',
             'tips': 'Sudut bangku 30-45°. Turunkan sampai siku sejajar bahu, tekan ke atas.',
-            'foto': 'https://www.inspireusafoundation.org/wp-content/uploads/2022/01/incline-dumbbell-press.gif'
+            'foto': 'https://i.imgur.com/incline_press.jpg',
+            'video': 'https://www.youtube.com/shorts/l4oxzPKEFgY'
         },
         {
             'nama': 'Lateral Raise',
             'detail': '3 set × 12-15 rep',
             'muscle': 'Bahu Samping',
             'tips': 'Angkat ke samping sampai sejajar bahu. Jangan ayun badan. Turunkan 2-3 detik.',
-            'foto': 'https://www.inspireusafoundation.org/wp-content/uploads/2022/01/dumbbell-lateral-raise.gif'
+            'foto': 'https://i.imgur.com/lateral_raise.jpg',
+            'video': 'https://www.youtube.com/shorts/OuG1smZTsQg'
         },
         {
             'nama': 'Tricep Pushdown',
             'detail': '3 set × 12-15 rep',
             'muscle': 'Tricep',
             'tips': 'Siku tetap di samping badan. Tekan ke bawah sampai lengan lurus, naikan perlahan.',
-            'foto': 'https://www.inspireusafoundation.org/wp-content/uploads/2022/01/cable-tricep-pushdown.gif'
+            'foto': 'https://i.imgur.com/tricep_pushdown.jpg',
+            'video': 'https://www.youtube.com/shorts/kiuVA0gs3EI'
         },
     ],
     'Pull Day': [
@@ -61,35 +66,40 @@ LATIHAN = {
             'detail': '4 set × 8-10 rep',
             'muscle': 'Punggung Atas',
             'tips': 'Tarik siku ke bawah dan belakang. Bayangkan menghancurkan sesuatu di ketiak kamu.',
-            'foto': 'https://www.inspireusafoundation.org/wp-content/uploads/2022/01/pull-up.gif'
+            'foto': 'https://i.imgur.com/pullup.jpg',
+            'video': 'https://www.youtube.com/shorts/eGo4IYlbE5g'
         },
         {
             'nama': 'Bent Over Row',
             'detail': '4 set × 8-10 rep',
             'muscle': 'Punggung Tengah',
             'tips': 'Condong 45°, punggung lurus. Tarik bar ke perut bawah. Core kencang.',
-            'foto': 'https://www.inspireusafoundation.org/wp-content/uploads/2022/01/barbell-bent-over-row.gif'
+            'foto': 'https://i.imgur.com/bent_row.jpg',
+            'video': 'https://www.youtube.com/shorts/QKKV-E3WKOU'
         },
         {
             'nama': 'Face Pull',
             'detail': '3 set × 15 rep',
             'muscle': 'Bahu Belakang',
             'tips': 'Tarik ke arah wajah, siku setinggi bahu. Putar tangan ke luar di akhir gerakan.',
-            'foto': 'https://www.inspireusafoundation.org/wp-content/uploads/2022/01/cable-face-pull.gif'
+            'foto': 'https://i.imgur.com/face_pull.jpg',
+            'video': 'https://www.youtube.com/shorts/rep0B2n_YMo'
         },
         {
             'nama': 'Dumbbell Curl',
             'detail': '3 set × 10-12 rep',
             'muscle': 'Bicep',
             'tips': 'Siku tetap di samping. Curl penuh dari bawah ke atas. Supinasikan tangan di puncak.',
-            'foto': 'https://www.inspireusafoundation.org/wp-content/uploads/2022/01/dumbbell-bicep-curl.gif'
+            'foto': 'https://i.imgur.com/db_curl.jpg',
+            'video': 'https://www.youtube.com/shorts/ykJmrZ5v0Oo'
         },
         {
             'nama': 'Hammer Curl',
             'detail': '3 set × 10-12 rep',
             'muscle': 'Bicep & Lengan Bawah',
             'tips': 'Telapak saling berhadapan. Angkat bergantian atau bersamaan dengan kontrol.',
-            'foto': 'https://www.inspireusafoundation.org/wp-content/uploads/2022/01/dumbbell-hammer-curl.gif'
+            'foto': 'https://i.imgur.com/hammer_curl.jpg',
+            'video': 'https://www.youtube.com/shorts/TwD-YGVP4Bk'
         },
     ],
     'Legs Day': [
@@ -98,35 +108,40 @@ LATIHAN = {
             'detail': '4 set × 8-10 rep',
             'muscle': 'Quad & Glute',
             'tips': 'Kaki selebar bahu, jari sedikit keluar. Turun sampai paha sejajar lantai. Dorong melalui tumit.',
-            'foto': 'https://www.inspireusafoundation.org/wp-content/uploads/2022/01/barbell-squat.gif'
+            'foto': 'https://i.imgur.com/squat.jpg',
+            'video': 'https://www.youtube.com/shorts/ultWZbUMc30'
         },
         {
             'nama': 'Romanian Deadlift',
             'detail': '3 set × 10-12 rep',
             'muscle': 'Hamstring',
             'tips': 'Punggung lurus, dorong pinggul ke belakang. Rasakan tarikan kuat di belakang paha.',
-            'foto': 'https://www.inspireusafoundation.org/wp-content/uploads/2022/01/romanian-deadlift.gif'
+            'foto': 'https://i.imgur.com/rdl.jpg',
+            'video': 'https://www.youtube.com/shorts/XxWcirHIwVo'
         },
         {
             'nama': 'Leg Press',
             'detail': '3 set × 12 rep',
             'muscle': 'Quad',
             'tips': 'Kaki atas = hamstring/glute, kaki bawah = quad. Jangan kunci lutut di atas.',
-            'foto': 'https://www.inspireusafoundation.org/wp-content/uploads/2022/01/leg-press.gif'
+            'foto': 'https://i.imgur.com/leg_press.jpg',
+            'video': 'https://www.youtube.com/shorts/IZxyjW7MPJQ'
         },
         {
             'nama': 'Leg Curl',
             'detail': '3 set × 12-15 rep',
             'muscle': 'Hamstring',
             'tips': 'Curl kaki ke atas perlahan. Tahan 1 detik di atas, turunkan 2-3 detik.',
-            'foto': 'https://www.inspireusafoundation.org/wp-content/uploads/2022/01/lying-leg-curl.gif'
+            'foto': 'https://i.imgur.com/leg_curl.jpg',
+            'video': 'https://www.youtube.com/shorts/Orxoeast8r4'
         },
         {
             'nama': 'Calf Raise',
             'detail': '4 set × 15-20 rep',
             'muscle': 'Betis',
-            'tips': 'Angkat setinggi mungkin, tahan 1 detik. Turunkan sampai tumit di bawah platform untuk stretch penuh.',
-            'foto': 'https://www.inspireusafoundation.org/wp-content/uploads/2022/01/standing-calf-raise.gif'
+            'tips': 'Angkat setinggi mungkin, tahan 1 detik. Turunkan sampai tumit di bawah platform.',
+            'foto': 'https://i.imgur.com/calf_raise.jpg',
+            'video': 'https://www.youtube.com/shorts/gwLzBJYoWlQ'
         },
     ]
 }
@@ -142,20 +157,22 @@ def kirim_pesan(teks):
     res = urllib.request.urlopen(req)
     return json.loads(res.read())
 
-def kirim_foto(foto_url, caption):
-    url = f'https://api.telegram.org/bot{TOKEN}/sendPhoto'
+def kirim_animasi(url_gif, caption):
+    """Kirim GIF/animasi via sendAnimation"""
+    url = f'https://api.telegram.org/bot{TOKEN}/sendAnimation'
     data = json.dumps({
         'chat_id': CHAT_ID,
-        'photo': foto_url,
+        'animation': url_gif,
         'caption': caption,
         'parse_mode': 'Markdown'
     }).encode()
     req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json'})
     try:
         res = urllib.request.urlopen(req)
-        return json.loads(res.read())
+        result = json.loads(res.read())
+        return result
     except Exception as e:
-        print(f'Gagal kirim foto {foto_url}: {e}')
+        print(f'Gagal kirim animasi: {e}')
         return None
 
 def get_jadwal_hari():
@@ -195,16 +212,19 @@ Besok kamu akan lebih kuat! 💪"""
 🔥 Ayo semangat! Setiap rep membentuk tubuhmu!
 ⏰ Warm up 5-10 menit dulu ya!"""
         kirim_pesan(msg)
+        time.sleep(1)
 
-        # Kirim foto + detail tiap latihan
+        # Kirim detail + link video tiap latihan
         for i, ex in enumerate(latihannya, 1):
             caption = f"""*{i}. {ex['nama']}*
 🎯 Otot: *{ex['muscle']}*
 📊 {ex['detail']}
 
 💡 *Tips teknik:*
-{ex['tips']}"""
-            kirim_foto(ex['foto'], caption)
+{ex['tips']}
+
+▶️ [Lihat video gerakan]({ex['video']})"""
+            kirim_pesan(caption)
             time.sleep(1.5)
 
     print(f"✅ Reminder pagi terkirim — {nama}")
