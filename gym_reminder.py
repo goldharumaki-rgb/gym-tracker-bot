@@ -3,6 +3,7 @@ import json
 import datetime
 import os
 import time
+import uuid
 
 TOKEN = os.environ.get('TELEGRAM_TOKEN', '')
 CHAT_ID = os.environ.get('TELEGRAM_CHAT_ID', '')
@@ -16,8 +17,6 @@ JADWAL = {
     5: ('Istirahat', '😴'),
     6: ('Istirahat', '😴')
 }
-
-BASE_URL = "https://github.com/goldharumaki-rgb/gym-tracker-bot/raw/main"
 
 LATIHAN = {
     'Push Day': [
@@ -50,29 +49,18 @@ def kirim_pesan(teks):
     res = urllib.request.urlopen(req)
     return json.loads(res.read())
 
-def kirim_foto_file(nama_file, caption):
-    """Download foto dari GitHub lalu kirim ke Telegram sebagai file"""
-    foto_url = f'{BASE_URL}/{nama_file}'
-    tmp_path = f'/tmp/{nama_file}'
-    
-    # Download foto dulu
-    try:
-        req = urllib.request.Request(foto_url, headers={'User-Agent': 'Mozilla/5.0'})
-        with urllib.request.urlopen(req, timeout=15) as r:
-            foto_data = r.read()
-        with open(tmp_path, 'wb') as f:
-            f.write(foto_data)
-    except Exception as e:
-        print(f'Gagal download foto {nama_file}: {e}')
+def kirim_foto_lokal(path_foto, caption):
+    """Kirim foto dari file lokal ke Telegram"""
+    if not os.path.exists(path_foto):
+        print(f'File tidak ada: {path_foto}')
         return None
 
-    # Kirim ke Telegram pakai multipart form
-    import uuid
+    with open(path_foto, 'rb') as f:
+        foto_bytes = f.read()
+
+    nama_file = os.path.basename(path_foto)
     boundary = uuid.uuid4().hex
     caption_encoded = caption.encode('utf-8')
-    
-    with open(tmp_path, 'rb') as f:
-        foto_bytes = f.read()
 
     body = (
         f'--{boundary}\r\n'
@@ -100,10 +88,10 @@ def kirim_foto_file(nama_file, caption):
         if result.get('ok'):
             print(f'✅ Foto {nama_file} terkirim')
         else:
-            print(f'❌ Foto gagal: {result}')
+            print(f'❌ Gagal: {result}')
         return result
     except Exception as e:
-        print(f'Error kirim foto: {e}')
+        print(f'Error: {e}')
         return None
 
 def get_jadwal_hari():
@@ -144,6 +132,8 @@ Besok kamu akan lebih kuat! 💪"""
         kirim_pesan(msg)
         time.sleep(1)
 
+        # Foto ada di folder yang sama karena sudah di-checkout oleh GitHub Actions
+        script_dir = os.path.dirname(os.path.abspath(__file__))
         for i, ex in enumerate(latihannya, 1):
             caption = f"""*{i}. {ex['nama']}*
 🎯 Otot: *{ex['muscle']}*
@@ -151,7 +141,8 @@ Besok kamu akan lebih kuat! 💪"""
 
 💡 *Tips teknik:*
 {ex['tips']}"""
-            kirim_foto_file(ex['foto'], caption)
+            foto_path = os.path.join(script_dir, ex['foto'])
+            kirim_foto_lokal(foto_path, caption)
             time.sleep(2)
 
     print(f"✅ Reminder pagi terkirim — {nama}")
