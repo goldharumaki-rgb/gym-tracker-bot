@@ -17,6 +17,7 @@ JADWAL = {
     6: ('Istirahat', '😴')
 }
 
+# Foto dari Wikipedia Commons - public domain, bisa diakses Telegram
 LATIHAN = {
     'Push Day': [
         {
@@ -24,82 +25,72 @@ LATIHAN = {
             'detail': '4 set × 8-10 rep',
             'muscle': 'Dada',
             'tips': 'Punggung rata di bangku. Turunkan bar ke dada perlahan, dorong eksplosif ke atas. Siku 45° dari badan.',
-            'foto': 'https://i.imgur.com/bench_press.jpg',
-            'video': 'https://www.youtube.com/shorts/KwRRhpHiKAg'
+            'foto': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Bench_press_2.jpg/640px-Bench_press_2.jpg'
         },
         {
             'nama': 'Overhead Press',
             'detail': '3 set × 8-10 rep',
             'muscle': 'Bahu',
             'tips': 'Berdiri tegak, core kencang. Dorong bar lurus ke atas sampai lengan ekstensi penuh.',
-            'foto': 'https://i.imgur.com/overhead_press.jpg',
-            'video': 'https://www.youtube.com/shorts/qqMjmHkJXvg'
+            'foto': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Overhead_press_with_barbell.jpg/640px-Overhead_press_with_barbell.jpg'
         },
         {
             'nama': 'Incline Dumbbell Press',
             'detail': '3 set × 10-12 rep',
             'muscle': 'Dada Atas',
             'tips': 'Sudut bangku 30-45°. Turunkan sampai siku sejajar bahu, tekan ke atas.',
-            'foto': 'https://i.imgur.com/incline_press.jpg',
-            'video': 'https://www.youtube.com/shorts/l4oxzPKEFgY'
+            'foto': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Bench_press_2.jpg/640px-Bench_press_2.jpg'
         },
         {
             'nama': 'Lateral Raise',
             'detail': '3 set × 12-15 rep',
             'muscle': 'Bahu Samping',
             'tips': 'Angkat ke samping sampai sejajar bahu. Jangan ayun badan. Turunkan 2-3 detik.',
-            'foto': 'https://i.imgur.com/lateral_raise.jpg',
-            'video': 'https://www.youtube.com/shorts/OuG1smZTsQg'
+            'foto': 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Deltoid_lateral_raise.jpg/640px-Deltoid_lateral_raise.jpg'
         },
         {
             'nama': 'Tricep Pushdown',
             'detail': '3 set × 12-15 rep',
             'muscle': 'Tricep',
             'tips': 'Siku tetap di samping badan. Tekan ke bawah sampai lengan lurus, naikan perlahan.',
-            'foto': 'https://i.imgur.com/tricep_pushdown.jpg',
-            'video': 'https://www.youtube.com/shorts/kiuVA0gs3EI'
+            'foto': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Bench_press_2.jpg/640px-Bench_press_2.jpg'
         },
     ],
     'Pull Day': [
         {
-            'nama': 'Pull Up / Lat Pulldown',
+            'nama': 'Pull Up',
             'detail': '4 set × 8-10 rep',
             'muscle': 'Punggung Atas',
             'tips': 'Tarik siku ke bawah dan belakang. Bayangkan menghancurkan sesuatu di ketiak kamu.',
-            'foto': 'https://i.imgur.com/pullup.jpg',
-            'video': 'https://www.youtube.com/shorts/eGo4IYlbE5g'
+            'foto': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Man_doing_pull_ups.jpg/640px-Man_doing_pull_ups.jpg'
         },
         {
             'nama': 'Bent Over Row',
             'detail': '4 set × 8-10 rep',
             'muscle': 'Punggung Tengah',
             'tips': 'Condong 45°, punggung lurus. Tarik bar ke perut bawah. Core kencang.',
-            'foto': 'https://i.imgur.com/bent_row.jpg',
-            'video': 'https://www.youtube.com/shorts/QKKV-E3WKOU'
+            'foto': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Bench_press_2.jpg/640px-Bench_press_2.jpg'
         },
         {
             'nama': 'Face Pull',
             'detail': '3 set × 15 rep',
             'muscle': 'Bahu Belakang',
             'tips': 'Tarik ke arah wajah, siku setinggi bahu. Putar tangan ke luar di akhir gerakan.',
-            'foto': 'https://i.imgur.com/face_pull.jpg',
-            'video': 'https://www.youtube.com/shorts/rep0B2n_YMo'
+            'foto': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Bench_press_2.jpg/640px-Bench_press_2.jpg'
         },
         {
             'nama': 'Dumbbell Curl',
             'detail': '3 set × 10-12 rep',
             'muscle': 'Bicep',
             'tips': 'Siku tetap di samping. Curl penuh dari bawah ke atas. Supinasikan tangan di puncak.',
-            'foto': 'https://i.imgur.com/db_curl.jpg',
-            'video': 'https://www.youtube.com/shorts/ykJmrZ5v0Oo'
+            'foto': 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Bicep_curl_with_dumbbell.jpg/640px-Bicep_curl_with_dumbbell.jpg'
         },
         {
             'nama': 'Hammer Curl',
             'detail': '3 set × 10-12 rep',
             'muscle': 'Bicep & Lengan Bawah',
             'tips': 'Telapak saling berhadapan. Angkat bergantian atau bersamaan dengan kontrol.',
-            'foto': 'https://i.imgur.com/hammer_curl.jpg',
-            'video': 'https://www.youtube.com/shorts/TwD-YGVP4Bk'
+            'foto': 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Bicep_curl_with_dumbbell.jpg/640px-Bicep_curl_with_dumbbell.jpg'
         },
     ],
     'Legs Day': [
@@ -108,40 +99,35 @@ LATIHAN = {
             'detail': '4 set × 8-10 rep',
             'muscle': 'Quad & Glute',
             'tips': 'Kaki selebar bahu, jari sedikit keluar. Turun sampai paha sejajar lantai. Dorong melalui tumit.',
-            'foto': 'https://i.imgur.com/squat.jpg',
-            'video': 'https://www.youtube.com/shorts/ultWZbUMc30'
+            'foto': 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/SquatLateral.jpg/640px-SquatLateral.jpg'
         },
         {
             'nama': 'Romanian Deadlift',
             'detail': '3 set × 10-12 rep',
             'muscle': 'Hamstring',
             'tips': 'Punggung lurus, dorong pinggul ke belakang. Rasakan tarikan kuat di belakang paha.',
-            'foto': 'https://i.imgur.com/rdl.jpg',
-            'video': 'https://www.youtube.com/shorts/XxWcirHIwVo'
+            'foto': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Bench_press_2.jpg/640px-Bench_press_2.jpg'
         },
         {
             'nama': 'Leg Press',
             'detail': '3 set × 12 rep',
             'muscle': 'Quad',
             'tips': 'Kaki atas = hamstring/glute, kaki bawah = quad. Jangan kunci lutut di atas.',
-            'foto': 'https://i.imgur.com/leg_press.jpg',
-            'video': 'https://www.youtube.com/shorts/IZxyjW7MPJQ'
+            'foto': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Bench_press_2.jpg/640px-Bench_press_2.jpg'
         },
         {
             'nama': 'Leg Curl',
             'detail': '3 set × 12-15 rep',
             'muscle': 'Hamstring',
             'tips': 'Curl kaki ke atas perlahan. Tahan 1 detik di atas, turunkan 2-3 detik.',
-            'foto': 'https://i.imgur.com/leg_curl.jpg',
-            'video': 'https://www.youtube.com/shorts/Orxoeast8r4'
+            'foto': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Bench_press_2.jpg/640px-Bench_press_2.jpg'
         },
         {
             'nama': 'Calf Raise',
             'detail': '4 set × 15-20 rep',
             'muscle': 'Betis',
             'tips': 'Angkat setinggi mungkin, tahan 1 detik. Turunkan sampai tumit di bawah platform.',
-            'foto': 'https://i.imgur.com/calf_raise.jpg',
-            'video': 'https://www.youtube.com/shorts/gwLzBJYoWlQ'
+            'foto': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Bench_press_2.jpg/640px-Bench_press_2.jpg'
         },
     ]
 }
@@ -157,12 +143,11 @@ def kirim_pesan(teks):
     res = urllib.request.urlopen(req)
     return json.loads(res.read())
 
-def kirim_animasi(url_gif, caption):
-    """Kirim GIF/animasi via sendAnimation"""
-    url = f'https://api.telegram.org/bot{TOKEN}/sendAnimation'
+def kirim_foto(foto_url, caption):
+    url = f'https://api.telegram.org/bot{TOKEN}/sendPhoto'
     data = json.dumps({
         'chat_id': CHAT_ID,
-        'animation': url_gif,
+        'photo': foto_url,
         'caption': caption,
         'parse_mode': 'Markdown'
     }).encode()
@@ -170,9 +155,11 @@ def kirim_animasi(url_gif, caption):
     try:
         res = urllib.request.urlopen(req)
         result = json.loads(res.read())
+        if not result.get('ok'):
+            print(f'Foto gagal: {result}')
         return result
     except Exception as e:
-        print(f'Gagal kirim animasi: {e}')
+        print(f'Error foto: {e}')
         return None
 
 def get_jadwal_hari():
@@ -214,18 +201,16 @@ Besok kamu akan lebih kuat! 💪"""
         kirim_pesan(msg)
         time.sleep(1)
 
-        # Kirim detail + link video tiap latihan
+        # Kirim foto + caption tiap latihan
         for i, ex in enumerate(latihannya, 1):
             caption = f"""*{i}. {ex['nama']}*
 🎯 Otot: *{ex['muscle']}*
 📊 {ex['detail']}
 
 💡 *Tips teknik:*
-{ex['tips']}
-
-▶️ [Lihat video gerakan]({ex['video']})"""
-            kirim_pesan(caption)
-            time.sleep(1.5)
+{ex['tips']}"""
+            kirim_foto(ex['foto'], caption)
+            time.sleep(2)
 
     print(f"✅ Reminder pagi terkirim — {nama}")
 
