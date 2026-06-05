@@ -26,11 +26,4 @@ jobs:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          HOUR=$(date -u +%H)
-          if [ "$HOUR" = "22" ]; then
-            echo "Mengirim reminder pagi..."
-            python3 gym_reminder.py pagi
-          else
-            echo "Mengirim rekap malam..."
-            python3 gym_reminder.py malam
-          fi
+          python3 gym_reminder.py pagi
