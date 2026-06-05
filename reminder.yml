@@ -2,7 +2,6 @@ name: Gym Tracker Reminder
 
 on:
   schedule:
-    # 06:00 WIB = 21:00 UTC (previous day)
     - cron: '0 21 * * *'
   workflow_dispatch:
 
