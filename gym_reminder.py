@@ -10,11 +10,11 @@ CHAT_ID = os.environ.get('TELEGRAM_CHAT_ID', '')
 
 # Mon=0, Tue=1, Wed=2, Thu=3, Fri=4, Sat=5, Sun=6
 JADWAL = {
-    0: ('Rest Day', '😴'),
-    1: ('Upper Body', '💪'),
+    0: ('Upper Body', '💪'),
+    1: ('Rest Day', '😴'),
     2: ('Core', '🔥'),
-    3: ('Lower Body', '🦵'),
-    4: ('Rest Day', '😴'),
+    3: ('Rest Day', '😴'),
+    4: ('Lower Body', '🦵'),
     5: ('Rest Day', '😴'),
     6: ('Rest Day', '😴')
 }
@@ -24,36 +24,36 @@ LATIHAN = {
         {
             'nama': 'Bench Press',
             'detail': '4 sets × 8-10 reps',
-            'muscle': 'Chest, Triceps, Front Delts',
-            'tips': 'Retract your scapula, arch slightly. Lower bar to lower chest. Drive through your feet. Control the eccentric for 2-3 seconds.',
+            'muscle': 'Dada, Trisep, Bahu Depan',
+            'tips': '🔹 COMPOUND #1\nRetract scapula, slight arch. Lower bar to lower chest over 3 sec. Drive explosively up. Rest 60-90 sec between sets.',
             'foto': 'bench_press.jpg'
         },
         {
             'nama': 'Bent-over Barbell Row',
             'detail': '4 sets × 8-10 reps',
-            'muscle': 'Upper Back, Biceps',
-            'tips': 'Hinge to 45°, brace core. Pull bar to belly button. Squeeze lats at the top. Control the descent slowly.',
+            'muscle': 'Punggung Lebar, Bisep',
+            'tips': '🔹 COMPOUND #2\nHinge 45°, brace core hard. Pull bar to belly button. Squeeze lats 1 sec at top. Lower slowly 3 sec. Rest 60-90 sec.',
             'foto': 'bent_over_row.jpg'
         },
         {
             'nama': 'Overhead Press (OHP)',
             'detail': '3 sets × 10 reps',
-            'muscle': 'Shoulders, Triceps',
-            'tips': 'Bar starts at clavicle. Press slightly back overhead. Lock out fully at top. Keep core tight throughout.',
+            'muscle': 'Bahu, Trisep',
+            'tips': '🔹 COMPOUND #3\nBar at clavicle, press slightly back overhead. Full lockout at top. Lower over 3 sec. Keep core tight throughout.',
             'foto': 'overhead_press.jpg'
         },
         {
             'nama': 'Pull-up / Lat Pulldown',
             'detail': '3 sets × 8-12 reps',
-            'muscle': 'Latissimus Dorsi, Biceps',
-            'tips': 'Full range — dead hang to chin over bar. Pull elbows down and back. Squeeze lats at the bottom. Control the lowering phase.',
+            'muscle': 'Latissimus Dorsi, Bisep',
+            'tips': '🔹 COMPOUND #4\nFull range — dead hang to chin over bar. Pull elbows down and back. Squeeze lats hard at bottom. Control lowering 3 sec.',
             'foto': 'pull_up.jpg'
         },
         {
             'nama': 'Curl + Tricep Pushdown',
             'detail': '3 sets × 12 reps each',
-            'muscle': 'Biceps, Triceps (isolation)',
-            'tips': 'Superset: do curls immediately followed by pushdown. Keep elbows locked at sides for both. Squeeze hard at peak contraction.',
+            'muscle': 'Bisep, Trisep (isolasi)',
+            'tips': '🔹 SUPERSET\nDo curls immediately followed by pushdown — no rest between.\n• Curl: supinate at top, slow 3 sec lowering\n• Pushdown: elbows locked at sides, squeeze hard at lockout\nRest 60 sec after each superset.',
             'foto': 'dumbbell_curl.jpg'
         },
     ],
@@ -62,35 +62,28 @@ LATIHAN = {
             'nama': 'Plank',
             'detail': '3 sets × 45-60 seconds',
             'muscle': 'Transverse Abdominis',
-            'tips': 'Forearms on floor, body in straight line. Squeeze glutes and abs hard. Do not let hips sag or pike. Breathe steadily throughout.',
+            'tips': '🔹 STABILITY\nForearms on floor, body in straight line. Squeeze glutes and abs hard. Do not let hips sag or pike. Breathe steadily throughout.',
             'foto': 'plank.jpg'
         },
         {
             'nama': 'Hanging Leg Raise',
             'detail': '3 sets × 12-15 reps',
             'muscle': 'Lower Abs, Hip Flexors',
-            'tips': 'Hang from bar, posterior pelvic tilt. Raise legs to 90° or higher. Avoid swinging. Lower with full control.',
+            'tips': '🔹 COMPOUND CORE\nHang from bar, posterior pelvic tilt. Raise legs to 90° or higher. Avoid swinging. Lower with full control 3 sec.',
             'foto': 'hanging_leg_raise.jpg'
         },
         {
-            'nama': 'Cable Crunch',
-            'detail': '3 sets × 15 reps',
-            'muscle': 'Rectus Abdominis',
-            'tips': 'Kneel facing cable. Crunch elbows to knees. Round your spine — not hip flex. Squeeze abs hard at bottom.',
+            'nama': 'Cable Crunch + Russian Twist',
+            'detail': '3 sets × 15 reps each',
+            'muscle': 'Rectus Abdominis, Oblique',
+            'tips': '🔹 SUPERSET\nDo cable crunch immediately followed by Russian twist — no rest between.\n• Cable Crunch: round spine — not hip flex. Squeeze abs hard at bottom.\n• Russian Twist: lean back 45°, feet off floor. Rotate side to side, touch floor each rep.\nRest 60 sec after each superset.',
             'foto': 'cable_crunch.jpg'
-        },
-        {
-            'nama': 'Russian Twist (Weighted)',
-            'detail': '3 sets × 15 reps each side',
-            'muscle': 'Obliques',
-            'tips': 'Lean back 45°, feet off floor. Rotate plate side to side. Touch plate to floor each rep. Control the rotation.',
-            'foto': 'russian_twist.jpg'
         },
         {
             'nama': 'Back Extension / Hyperextension',
             'detail': '3 sets × 12-15 reps',
             'muscle': 'Erector Spinae',
-            'tips': 'Hinge at hips, not lower back. Rise until body is straight — do not hyperextend. Hold 1 second at top. Lower with control.',
+            'tips': '🔹 LOWER BACK\nHinge at hips — not lower back. Rise until body is straight. Hold 1 sec at top. Lower with control 3 sec. Add plate for extra resistance.',
             'foto': 'romanian_deadlift.jpg'
         },
     ],
@@ -98,22 +91,22 @@ LATIHAN = {
         {
             'nama': 'Barbell Back Squat',
             'detail': '4 sets × 6-8 reps',
-            'muscle': 'Quads, Glutes, Hamstrings',
-            'tips': 'Bar on traps, feet shoulder-width. Break hips and knees simultaneously. Hit parallel or below. Drive knees out on the way up.',
+            'muscle': 'Quad, Glute, Hamstring',
+            'tips': '🔹 COMPOUND #1\nBar on traps, feet shoulder-width, toes slightly out. Break hips and knees simultaneously. Hit parallel or below. Drive knees out on way up. Rest 90 sec.',
             'foto': 'squat.jpg'
         },
         {
             'nama': 'Romanian Deadlift (RDL)',
             'detail': '4 sets × 8-10 reps',
-            'muscle': 'Hamstrings, Glutes',
-            'tips': 'Push hips back, not down. Bar stays close to legs. Feel max stretch at bottom. Squeeze glutes hard at the top.',
+            'muscle': 'Hamstring, Glute',
+            'tips': '🔹 COMPOUND #2\nPush hips back — not down. Bar stays close to legs. Feel maximum stretch at bottom. Squeeze glutes hard at top. Lower 3 sec. Rest 90 sec.',
             'foto': 'romanian_deadlift.jpg'
         },
         {
             'nama': 'Leg Press + Calf Raise',
             'detail': '3 sets × 12 reps each',
-            'muscle': 'Quads, Gastrocnemius',
-            'tips': 'Superset: leg press full range then immediately calf raise on the same machine. Rise as high as possible on calf raise, hold 1 second at top.',
+            'muscle': 'Quad, Gastrocnemius',
+            'tips': '🔹 SUPERSET\nDo leg press immediately followed by calf raise on the same machine — no rest between.\n• Leg Press: full range, do not lock knees. High wide foot = glutes, low narrow = quads.\n• Calf Raise: rise on big toe, hold 2 sec at top, lower 3 sec.\nRest 90 sec after each superset.',
             'foto': 'leg_press.jpg'
         },
     ]
@@ -148,9 +141,9 @@ def kirim_foto_lokal(path_foto, caption):
         res = urllib.request.urlopen(req)
         result = json.loads(res.read())
         if result.get('ok'):
-            print(f'✅ Photo sent: {nama_file}')
+            print(f'✅ {nama_file}')
         else:
-            print(f'❌ Failed: {result}')
+            print(f'❌ {result}')
         return result
     except Exception as e:
         print(f'Error: {e}')
@@ -172,21 +165,21 @@ def reminder_pagi():
 
 Your body grows during rest — not just during training!
 ✅ Sleep 7-8 hours
-✅ Eat enough protein (1.6-2g per kg bodyweight)
-✅ Stay hydrated — at least 2 liters
+✅ Eat 1.6-2g protein per kg bodyweight
+✅ Stay hydrated — minimum 2 liters
 ✅ Light walk or stretching is fine
 
-Come back stronger tomorrow! 💪"""
+*Tip:* Every 4-6 weeks, take a deload week — reduce volume by 40-50% to allow full recovery. 💪"""
         kirim_pesan(msg)
 
     else:
         latihannya = LATIHAN[nama]
-        daftar = '\n'.join([f'⬜ *{l["nama"]}* — {l["detail"]}' for l in latihannya])
+        daftar = '\n'.join([f'⬜ *{l["nama"]}* — {l["detail"]} | _{l["muscle"]}_' for l in latihannya])
 
         notes = {
-            'Upper Body': '💡 *Note:* Compound movements first, isolation last. Rest 60-90 sec between sets.',
-            'Core': '💡 *Note:* Focus on quality over quantity. Breathe out on every crunch/contraction.',
-            'Lower Body': '💡 *Note:* Warm up knees well. Control every rep — especially the eccentric phase.'
+            'Upper Body': '💡 Compound first → Superset isolation last\n⏱ Rest 60-90 sec between sets',
+            'Core': '💡 Stability → Compound core → Superset → Lower back\n⏱ Rest 60 sec between sets',
+            'Lower Body': '💡 Compound first → Superset isolation last\n⏱ Rest 90 sec between sets'
         }
 
         msg = f"""🌅 *Good Morning, Ali!*
@@ -194,11 +187,11 @@ Come back stronger tomorrow! 💪"""
 📅 {hari_str}
 {emoji} *Today: {nama}*
 
-*Workout — 3-Day Split Program:*
+*3-Day Split — Warmup 5-10 mins first!*
+
 {daftar}
 
-{notes.get(nama, '')}
-⏰ Warmup 5-10 minutes before starting!"""
+{notes.get(nama, '')}"""
 
         kirim_pesan(msg)
         time.sleep(1)
@@ -206,10 +199,9 @@ Come back stronger tomorrow! 💪"""
         script_dir = os.path.dirname(os.path.abspath(__file__))
         for i, ex in enumerate(latihannya, 1):
             caption = f"""*{i}. {ex['nama']}*
-🎯 Muscle: *{ex['muscle']}*
+🎯 *{ex['muscle']}*
 📊 {ex['detail']}
 
-💡 *Form tips:*
 {ex['tips']}"""
             foto_path = os.path.join(script_dir, ex['foto'])
             kirim_foto_lokal(foto_path, caption)
