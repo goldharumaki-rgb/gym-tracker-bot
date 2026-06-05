@@ -17,7 +17,7 @@ JADWAL = {
     6: ('Istirahat', '😴')
 }
 
-BASE_URL = "https://raw.githubusercontent.com/goldharumaki-rgb/gym-tracker-bot/main"
+BASE_URL = "https://raw.githubusercontent.com/goldharumaki-rgb/gym-tracker-bot/main/image"
 
 LATIHAN = {
     'Push Day': [
