@@ -21,146 +21,89 @@ BASE_URL = "https://github.com/goldharumaki-rgb/gym-tracker-bot/raw/main"
 
 LATIHAN = {
     'Push Day': [
-        {
-            'nama': 'Bench Press',
-            'detail': '4 set × 8-10 rep',
-            'muscle': 'Dada',
-            'tips': 'Punggung rata di bangku. Turunkan bar ke dada perlahan, dorong eksplosif ke atas. Siku 45° dari badan.',
-            'foto': f'{BASE_URL}/bench_press.jpg'
-        },
-        {
-            'nama': 'Overhead Press',
-            'detail': '3 set × 8-10 rep',
-            'muscle': 'Bahu',
-            'tips': 'Berdiri tegak, core kencang. Dorong bar lurus ke atas sampai lengan ekstensi penuh.',
-            'foto': f'{BASE_URL}/overhead_press.jpg'
-        },
-        {
-            'nama': 'Incline Dumbbell Press',
-            'detail': '3 set × 10-12 rep',
-            'muscle': 'Dada Atas',
-            'tips': 'Sudut bangku 30-45°. Turunkan sampai siku sejajar bahu, tekan ke atas.',
-            'foto': f'{BASE_URL}/incline_press.jpg'
-        },
-        {
-            'nama': 'Lateral Raise',
-            'detail': '3 set × 12-15 rep',
-            'muscle': 'Bahu Samping',
-            'tips': 'Angkat ke samping sampai sejajar bahu. Jangan ayun badan. Turunkan 2-3 detik.',
-            'foto': f'{BASE_URL}/lateral_raise.jpg'
-        },
-        {
-            'nama': 'Tricep Pushdown',
-            'detail': '3 set × 12-15 rep',
-            'muscle': 'Tricep',
-            'tips': 'Siku tetap di samping badan. Tekan ke bawah sampai lengan lurus, naikan perlahan.',
-            'foto': f'{BASE_URL}/tricep_pushdown.jpg'
-        },
+        {'nama': 'Bench Press', 'detail': '4 set × 8-10 rep', 'muscle': 'Dada', 'tips': 'Punggung rata di bangku. Turunkan bar ke dada perlahan, dorong eksplosif ke atas. Siku 45° dari badan.', 'foto': 'bench_press.jpg'},
+        {'nama': 'Overhead Press', 'detail': '3 set × 8-10 rep', 'muscle': 'Bahu', 'tips': 'Berdiri tegak, core kencang. Dorong bar lurus ke atas sampai lengan ekstensi penuh.', 'foto': 'overhead_press.jpg'},
+        {'nama': 'Incline Dumbbell Press', 'detail': '3 set × 10-12 rep', 'muscle': 'Dada Atas', 'tips': 'Sudut bangku 30-45°. Turunkan sampai siku sejajar bahu, tekan ke atas.', 'foto': 'incline_press.jpg'},
+        {'nama': 'Lateral Raise', 'detail': '3 set × 12-15 rep', 'muscle': 'Bahu Samping', 'tips': 'Angkat ke samping sampai sejajar bahu. Jangan ayun badan. Turunkan 2-3 detik.', 'foto': 'lateral_raise.jpg'},
+        {'nama': 'Tricep Pushdown', 'detail': '3 set × 12-15 rep', 'muscle': 'Tricep', 'tips': 'Siku tetap di samping badan. Tekan ke bawah sampai lengan lurus, naikan perlahan.', 'foto': 'tricep_pushdown.jpg'},
     ],
     'Pull Day': [
-        {
-            'nama': 'Pull Up / Lat Pulldown',
-            'detail': '4 set × 8-10 rep',
-            'muscle': 'Punggung Atas',
-            'tips': 'Tarik siku ke bawah dan belakang. Bayangkan menghancurkan sesuatu di ketiak kamu.',
-            'foto': f'{BASE_URL}/pull_up.jpg'
-        },
-        {
-            'nama': 'Bent Over Row',
-            'detail': '4 set × 8-10 rep',
-            'muscle': 'Punggung Tengah',
-            'tips': 'Condong 45°, punggung lurus. Tarik bar ke perut bawah. Core kencang.',
-            'foto': f'{BASE_URL}/bent_over_row.jpg'
-        },
-        {
-            'nama': 'Face Pull',
-            'detail': '3 set × 15 rep',
-            'muscle': 'Bahu Belakang',
-            'tips': 'Tarik ke arah wajah, siku setinggi bahu. Putar tangan ke luar di akhir gerakan.',
-            'foto': f'{BASE_URL}/face_pull.jpg'
-        },
-        {
-            'nama': 'Dumbbell Curl',
-            'detail': '3 set × 10-12 rep',
-            'muscle': 'Bicep',
-            'tips': 'Siku tetap di samping. Curl penuh dari bawah ke atas. Supinasikan tangan di puncak.',
-            'foto': f'{BASE_URL}/dumbbell_curl.jpg'
-        },
-        {
-            'nama': 'Hammer Curl',
-            'detail': '3 set × 10-12 rep',
-            'muscle': 'Bicep & Lengan Bawah',
-            'tips': 'Telapak saling berhadapan. Angkat bergantian atau bersamaan dengan kontrol.',
-            'foto': f'{BASE_URL}/hammer_curl.jpg'
-        },
+        {'nama': 'Pull Up / Lat Pulldown', 'detail': '4 set × 8-10 rep', 'muscle': 'Punggung Atas', 'tips': 'Tarik siku ke bawah dan belakang. Bayangkan menghancurkan sesuatu di ketiak kamu.', 'foto': 'pull_up.jpg'},
+        {'nama': 'Bent Over Row', 'detail': '4 set × 8-10 rep', 'muscle': 'Punggung Tengah', 'tips': 'Condong 45°, punggung lurus. Tarik bar ke perut bawah. Core kencang.', 'foto': 'bent_over_row.jpg'},
+        {'nama': 'Face Pull', 'detail': '3 set × 15 rep', 'muscle': 'Bahu Belakang', 'tips': 'Tarik ke arah wajah, siku setinggi bahu. Putar tangan ke luar di akhir gerakan.', 'foto': 'face_pull.jpg'},
+        {'nama': 'Dumbbell Curl', 'detail': '3 set × 10-12 rep', 'muscle': 'Bicep', 'tips': 'Siku tetap di samping. Curl penuh dari bawah ke atas. Supinasikan tangan di puncak.', 'foto': 'dumbbell_curl.jpg'},
+        {'nama': 'Hammer Curl', 'detail': '3 set × 10-12 rep', 'muscle': 'Bicep & Lengan Bawah', 'tips': 'Telapak saling berhadapan. Angkat bergantian atau bersamaan dengan kontrol.', 'foto': 'hammer_curl.jpg'},
     ],
     'Legs Day': [
-        {
-            'nama': 'Squat',
-            'detail': '4 set × 8-10 rep',
-            'muscle': 'Quad & Glute',
-            'tips': 'Kaki selebar bahu, jari sedikit keluar. Turun sampai paha sejajar lantai. Dorong melalui tumit.',
-            'foto': f'{BASE_URL}/squat.jpg'
-        },
-        {
-            'nama': 'Romanian Deadlift',
-            'detail': '3 set × 10-12 rep',
-            'muscle': 'Hamstring',
-            'tips': 'Punggung lurus, dorong pinggul ke belakang. Rasakan tarikan kuat di belakang paha.',
-            'foto': f'{BASE_URL}/romanian_deadlift.jpg'
-        },
-        {
-            'nama': 'Leg Press',
-            'detail': '3 set × 12 rep',
-            'muscle': 'Quad',
-            'tips': 'Kaki atas = hamstring/glute, kaki bawah = quad. Jangan kunci lutut di atas.',
-            'foto': f'{BASE_URL}/leg_press.jpg'
-        },
-        {
-            'nama': 'Leg Curl',
-            'detail': '3 set × 12-15 rep',
-            'muscle': 'Hamstring',
-            'tips': 'Curl kaki ke atas perlahan. Tahan 1 detik di atas, turunkan 2-3 detik.',
-            'foto': f'{BASE_URL}/leg_curl.jpg'
-        },
-        {
-            'nama': 'Calf Raise',
-            'detail': '4 set × 15-20 rep',
-            'muscle': 'Betis',
-            'tips': 'Angkat setinggi mungkin, tahan 1 detik. Turunkan sampai tumit di bawah platform.',
-            'foto': f'{BASE_URL}/calf_raise.jpg'
-        },
+        {'nama': 'Squat', 'detail': '4 set × 8-10 rep', 'muscle': 'Quad & Glute', 'tips': 'Kaki selebar bahu, jari sedikit keluar. Turun sampai paha sejajar lantai. Dorong melalui tumit.', 'foto': 'squat.jpg'},
+        {'nama': 'Romanian Deadlift', 'detail': '3 set × 10-12 rep', 'muscle': 'Hamstring', 'tips': 'Punggung lurus, dorong pinggul ke belakang. Rasakan tarikan kuat di belakang paha.', 'foto': 'romanian_deadlift.jpg'},
+        {'nama': 'Leg Press', 'detail': '3 set × 12 rep', 'muscle': 'Quad', 'tips': 'Kaki atas = hamstring/glute, kaki bawah = quad. Jangan kunci lutut di atas.', 'foto': 'leg_press.jpg'},
+        {'nama': 'Leg Curl', 'detail': '3 set × 12-15 rep', 'muscle': 'Hamstring', 'tips': 'Curl kaki ke atas perlahan. Tahan 1 detik di atas, turunkan 2-3 detik.', 'foto': 'leg_curl.jpg'},
+        {'nama': 'Calf Raise', 'detail': '4 set × 15-20 rep', 'muscle': 'Betis', 'tips': 'Angkat setinggi mungkin, tahan 1 detik. Turunkan sampai tumit di bawah platform.', 'foto': 'calf_raise.jpg'},
     ]
 }
 
 def kirim_pesan(teks):
     url = f'https://api.telegram.org/bot{TOKEN}/sendMessage'
-    data = json.dumps({
-        'chat_id': CHAT_ID,
-        'text': teks,
-        'parse_mode': 'Markdown'
-    }).encode()
+    data = json.dumps({'chat_id': CHAT_ID, 'text': teks, 'parse_mode': 'Markdown'}).encode()
     req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json'})
     res = urllib.request.urlopen(req)
     return json.loads(res.read())
 
-def kirim_foto(foto_url, caption):
+def kirim_foto_file(nama_file, caption):
+    """Download foto dari GitHub lalu kirim ke Telegram sebagai file"""
+    foto_url = f'{BASE_URL}/{nama_file}'
+    tmp_path = f'/tmp/{nama_file}'
+    
+    # Download foto dulu
+    try:
+        req = urllib.request.Request(foto_url, headers={'User-Agent': 'Mozilla/5.0'})
+        with urllib.request.urlopen(req, timeout=15) as r:
+            foto_data = r.read()
+        with open(tmp_path, 'wb') as f:
+            f.write(foto_data)
+    except Exception as e:
+        print(f'Gagal download foto {nama_file}: {e}')
+        return None
+
+    # Kirim ke Telegram pakai multipart form
+    import uuid
+    boundary = uuid.uuid4().hex
+    caption_encoded = caption.encode('utf-8')
+    
+    with open(tmp_path, 'rb') as f:
+        foto_bytes = f.read()
+
+    body = (
+        f'--{boundary}\r\n'
+        f'Content-Disposition: form-data; name="chat_id"\r\n\r\n'
+        f'{CHAT_ID}\r\n'
+        f'--{boundary}\r\n'
+        f'Content-Disposition: form-data; name="parse_mode"\r\n\r\n'
+        f'Markdown\r\n'
+        f'--{boundary}\r\n'
+        f'Content-Disposition: form-data; name="caption"\r\n\r\n'
+    ).encode() + caption_encoded + (
+        f'\r\n--{boundary}\r\n'
+        f'Content-Disposition: form-data; name="photo"; filename="{nama_file}"\r\n'
+        f'Content-Type: image/jpeg\r\n\r\n'
+    ).encode() + foto_bytes + f'\r\n--{boundary}--\r\n'.encode()
+
     url = f'https://api.telegram.org/bot{TOKEN}/sendPhoto'
-    data = json.dumps({
-        'chat_id': CHAT_ID,
-        'photo': foto_url,
-        'caption': caption,
-        'parse_mode': 'Markdown'
-    }).encode()
-    req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json'})
+    req = urllib.request.Request(
+        url, data=body,
+        headers={'Content-Type': f'multipart/form-data; boundary={boundary}'}
+    )
     try:
         res = urllib.request.urlopen(req)
         result = json.loads(res.read())
-        if not result.get('ok'):
-            print(f'Foto gagal: {result}')
+        if result.get('ok'):
+            print(f'✅ Foto {nama_file} terkirim')
+        else:
+            print(f'❌ Foto gagal: {result}')
         return result
     except Exception as e:
-        print(f'Error foto: {e}')
+        print(f'Error kirim foto: {e}')
         return None
 
 def get_jadwal_hari():
@@ -188,7 +131,6 @@ Besok kamu akan lebih kuat! 💪"""
     else:
         latihannya = LATIHAN[nama]
         daftar = '\n'.join([f'⬜ *{l["nama"]}* — {l["detail"]} ({l["muscle"]})' for l in latihannya])
-
         msg = f"""🌅 *Selamat Pagi, Ali!*
 
 📅 {hari_str}
@@ -209,7 +151,7 @@ Besok kamu akan lebih kuat! 💪"""
 
 💡 *Tips teknik:*
 {ex['tips']}"""
-            kirim_foto(ex['foto'], caption)
+            kirim_foto_file(ex['foto'], caption)
             time.sleep(2)
 
     print(f"✅ Reminder pagi terkirim — {nama}")
