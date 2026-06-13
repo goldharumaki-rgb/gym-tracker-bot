@@ -8,7 +8,6 @@ import uuid
 TOKEN = os.environ.get('TELEGRAM_TOKEN', '')
 CHAT_ID = os.environ.get('TELEGRAM_CHAT_ID', '')
 
-# Mon=0, Tue=1, Wed=2, Thu=3, Fri=4, Sat=5, Sun=6
 JADWAL = {
     0: ('Upper A', '💪🔵'),
     1: ('Lower A', '🦵🔵'),
@@ -25,50 +24,85 @@ LATIHAN = {
             'nama': 'Incline Barbell Bench Press',
             'detail': '4 sets × 6-8 reps',
             'muscle': 'Upper Chest, Triceps, Front Delts',
-            'tips': '🔹 CHEST #1\nRetract scapula, slight arch. Lower bar to upper chest over 3 sec. Drive explosively up. Log weight every session.\n\n📌 *Opsi:*\n• Incline Dumbbell Press\n• Smith Machine Incline Press\n• Machine Incline Press',
-            'foto': 'incline_press.jpg'
+            'tips': '🔹 CHEST #1\nRetract scapula, slight arch. Lower bar to upper chest over 3 sec. Drive explosively up. Log weight every session.',
+            'foto': 'incline_press.jpg',
+            'opsi': [
+                ('Incline Dumbbell Press', 'incline_press.jpg'),
+                ('Smith Machine Incline Press', 'smith_incline_press.jpg'),
+                ('Machine Incline Press', 'chest_press_machine.jpg'),
+            ]
         },
         {
             'nama': 'Pull Up',
             'detail': '4 sets × 6-8 reps',
             'muscle': 'Lats, Biceps',
-            'tips': '🔹 BACK VERTICAL #1\nFull range — dead hang to chin over bar. Pull elbows down and back. Squeeze lats hard at bottom. Control lowering 3 sec.\n\n📌 *Opsi:*\n• Lat Pulldown\n• Assisted Pull Up\n• Neutral Grip Pulldown',
-            'foto': 'pull_up.jpg'
+            'tips': '🔹 BACK VERTICAL #1\nFull range — dead hang to chin over bar. Pull elbows down and back. Squeeze lats hard at bottom. Control lowering 3 sec.',
+            'foto': 'pull_up.jpg',
+            'opsi': [
+                ('Lat Pulldown', 'pull_up.jpg'),
+                ('Assisted Pull Up', 'assisted_pull_up.jpg'),
+                ('Neutral Grip Pulldown', 'neutral_grip_pulldown.jpg'),
+            ]
         },
         {
             'nama': 'Flat Dumbbell Press',
             'detail': '3 sets × 8-10 reps',
             'muscle': 'Chest, Triceps',
-            'tips': '🔹 CHEST #2\nFeel the chest stretch at bottom. Squeeze hard at top. Tempo 2-1-2. Focus on mind-muscle connection.\n\n📌 *Opsi:*\n• Barbell Bench Press\n• Chest Press Machine\n• Push Up Berbeban',
-            'foto': 'bench_press.jpg'
+            'tips': '🔹 CHEST #2\nFeel the chest stretch at bottom. Squeeze hard at top. Tempo 2-1-2. Focus on mind-muscle connection.',
+            'foto': 'bench_press.jpg',
+            'opsi': [
+                ('Barbell Bench Press', 'bench_press.jpg'),
+                ('Chest Press Machine', 'chest_press_machine.jpg'),
+                ('Push Up Berbeban', 'bench_press.jpg'),
+            ]
         },
         {
             'nama': 'T-Bar Row',
             'detail': '3 sets × 8-10 reps',
             'muscle': 'Mid-Back, Rhomboid, Biceps',
-            'tips': '🔹 BACK HORIZONTAL #1\nChest on pad. Pull elbows back and up. Squeeze shoulder blades hard at top. Slow 3 sec return.\n\n📌 *Opsi:*\n• Barbell Row\n• Chest Supported Row\n• Seated Cable Row',
-            'foto': 'bent_over_row.jpg'
+            'tips': '🔹 BACK HORIZONTAL #1\nChest on pad. Pull elbows back and up. Squeeze shoulder blades hard at top. Slow 3 sec return.',
+            'foto': 'bent_over_row.jpg',
+            'opsi': [
+                ('Barbell Row', 'bent_over_row.jpg'),
+                ('Chest Supported Row', 'seated_cable_row.jpg'),
+                ('Seated Cable Row', 'seated_cable_row.jpg'),
+            ]
         },
         {
             'nama': 'Seated Dumbbell Shoulder Press',
             'detail': '3 sets × 8-10 reps',
             'muscle': 'All Delt Heads, Triceps',
-            'tips': '🔹 SHOULDERS\nDumbbells at ear level. Press up and slightly inward. Full lockout at top. Lower 3 sec.\n\n📌 *Opsi:*\n• Arnold Press\n• Smith Shoulder Press\n• Machine Shoulder Press',
-            'foto': 'overhead_press.jpg'
+            'tips': '🔹 SHOULDERS\nDumbbells at ear level. Press up and slightly inward. Full lockout at top. Lower 3 sec.',
+            'foto': 'overhead_press.jpg',
+            'opsi': [
+                ('Arnold Press', 'arnold_press.jpg'),
+                ('Smith Shoulder Press', 'smith_incline_press.jpg'),
+                ('Machine Shoulder Press', 'chest_press_machine.jpg'),
+            ]
         },
         {
             'nama': 'EZ Bar Curl',
             'detail': '3 sets × 10-12 reps',
             'muscle': 'Biceps',
-            'tips': '🔹 BICEPS ISOLATION\nKeep elbows at sides. Full range from dead hang to full contraction. Slow 3 sec lowering.\n\n📌 *Opsi:*\n• Barbell Curl\n• Dumbbell Curl\n• Cable Curl',
-            'foto': 'dumbbell_curl.jpg'
+            'tips': '🔹 BICEPS ISOLATION\nKeep elbows at sides. Full range from dead hang to full contraction. Slow 3 sec lowering.',
+            'foto': 'dumbbell_curl.jpg',
+            'opsi': [
+                ('Barbell Curl', 'dumbbell_curl.jpg'),
+                ('Dumbbell Curl', 'dumbbell_curl.jpg'),
+                ('Cable Curl', 'cable_curl.jpg'),
+            ]
         },
         {
             'nama': 'Overhead Cable Extension',
             'detail': '3 sets × 10-12 reps',
             'muscle': 'Triceps Long Head',
-            'tips': '🔹 TRICEPS ISOLATION\nElbows close to head. Lower behind head until full stretch. Extend fully at top. Feel the long head stretch.\n\n📌 *Opsi:*\n• Skull Crusher\n• Dumbbell Overhead Extension\n• Machine Tricep Extension',
-            'foto': 'tricep_pushdown.jpg'
+            'tips': '🔹 TRICEPS ISOLATION\nElbows close to head. Lower behind head until full stretch. Extend fully at top. Feel the long head stretch.',
+            'foto': 'tricep_pushdown.jpg',
+            'opsi': [
+                ('Skull Crusher', 'skull_crusher.jpg'),
+                ('Dumbbell Overhead Extension', 'tricep_pushdown.jpg'),
+                ('Machine Tricep Extension', 'tricep_pushdown.jpg'),
+            ]
         },
     ],
     'Lower A': [
@@ -76,43 +110,71 @@ LATIHAN = {
             'nama': 'Back Squat',
             'detail': '4 sets × 6-8 reps',
             'muscle': 'Quads, Glutes, Hamstrings, Core',
-            'tips': '🔹 QUAD #1 — STRENGTH\nFeet shoulder-width, toes slightly out. Hit parallel or below. Drive knees out. Log weight every session.\n\n📌 *Opsi:*\n• Front Squat\n• Hack Squat\n• Pendulum Squat',
-            'foto': 'squat.jpg'
+            'tips': '🔹 QUAD #1 — STRENGTH\nFeet shoulder-width, toes slightly out. Hit parallel or below. Drive knees out. Log weight every session.',
+            'foto': 'squat.jpg',
+            'opsi': [
+                ('Front Squat', 'front_squat.jpg'),
+                ('Hack Squat', 'hack_squat.jpg'),
+                ('Pendulum Squat', 'pendulum_squat.jpg'),
+            ]
         },
         {
             'nama': 'Romanian Deadlift',
             'detail': '4 sets × 8-10 reps',
             'muscle': 'Hamstrings, Glutes, Lower Back',
-            'tips': '🔹 HAMSTRING #1 — STRENGTH\nPush hips back — not down. Feel maximum stretch at bottom. Squeeze glutes hard at top. Lower 3 sec.\n\n📌 *Opsi:*\n• Dumbbell RDL\n• Stiff Leg Deadlift\n• Good Morning',
-            'foto': 'romanian_deadlift.jpg'
+            'tips': '🔹 HAMSTRING #1 — STRENGTH\nPush hips back — not down. Feel maximum stretch at bottom. Squeeze glutes hard at top. Lower 3 sec.',
+            'foto': 'romanian_deadlift.jpg',
+            'opsi': [
+                ('Dumbbell RDL', 'romanian_deadlift.jpg'),
+                ('Stiff Leg Deadlift', 'romanian_deadlift.jpg'),
+                ('Good Morning', 'good_morning.jpg'),
+            ]
         },
         {
             'nama': 'Leg Press',
             'detail': '3 sets × 10-12 reps',
             'muscle': 'Quads, Glutes',
-            'tips': '🔹 QUAD #2\nFull range — do not lock knees. High wide foot = glutes. Low narrow foot = quads.\n\n📌 *Opsi:*\n• Hack Squat\n• Pendulum Squat\n• Belt Squat',
-            'foto': 'leg_press.jpg'
+            'tips': '🔹 QUAD #2\nFull range — do not lock knees. High wide foot = glutes. Low narrow foot = quads.',
+            'foto': 'leg_press.jpg',
+            'opsi': [
+                ('Hack Squat', 'hack_squat.jpg'),
+                ('Pendulum Squat', 'pendulum_squat.jpg'),
+                ('Belt Squat', 'squat.jpg'),
+            ]
         },
         {
             'nama': 'Walking Lunge',
             'detail': '3 sets × 12 steps/leg',
             'muscle': 'Quads, Glutes, Stabilizers',
-            'tips': '🔹 UNILATERAL\nStep forward, drop back knee toward floor. Keep front shin vertical. Drive through front heel. Stay controlled.\n\n📌 *Opsi:*\n• Reverse Lunge\n• Step Up\n• Smith Split Squat',
-            'foto': 'walking_lunge.jpg'
+            'tips': '🔹 UNILATERAL\nStep forward, drop back knee toward floor. Keep front shin vertical. Drive through front heel. Stay controlled.',
+            'foto': 'walking_lunge.jpg',
+            'opsi': [
+                ('Reverse Lunge', 'reverse_lunge.jpg'),
+                ('Step Up', 'step_up.jpg'),
+                ('Smith Split Squat', 'bulgarian_split_squat.jpg'),
+            ]
         },
         {
             'nama': 'Standing Calf Raise',
             'detail': '4 sets × 12-15 reps',
             'muscle': 'Gastrocnemius',
-            'tips': '🔹 CALVES\nRise on big toe. Hold 2 sec at top. Lower slowly 3 sec — full stretch at bottom. Do not bounce.\n\n📌 *Opsi:*\n• Donkey Calf Raise\n• Leg Press Calf Raise',
-            'foto': 'calf_raise.jpg'
+            'tips': '🔹 CALVES\nRise on big toe. Hold 2 sec at top. Lower slowly 3 sec — full stretch at bottom. Do not bounce.',
+            'foto': 'calf_raise.jpg',
+            'opsi': [
+                ('Donkey Calf Raise', 'donkey_calf_raise.jpg'),
+                ('Leg Press Calf Raise', 'leg_press.jpg'),
+            ]
         },
         {
             'nama': 'Cable Crunch',
             'detail': '3 sets × 15-20 reps',
             'muscle': 'Rectus Abdominis',
-            'tips': '🔹 CORE\nKneel facing cable. Round your spine — not hip flex. Squeeze abs hard at bottom. Slow 3 sec return.\n\n📌 *Opsi:*\n• Machine Crunch\n• Decline Sit Up',
-            'foto': 'cable_crunch.jpg'
+            'tips': '🔹 CORE\nKneel facing cable. Round your spine — not hip flex. Squeeze abs hard at bottom. Slow 3 sec return.',
+            'foto': 'cable_crunch.jpg',
+            'opsi': [
+                ('Machine Crunch', 'cable_crunch.jpg'),
+                ('Decline Sit Up', 'decline_sit_up.jpg'),
+            ]
         },
     ],
     'Upper B': [
@@ -120,50 +182,83 @@ LATIHAN = {
             'nama': 'Chest Dip',
             'detail': '4 sets × 8-10 reps',
             'muscle': 'Lower Chest, Triceps',
-            'tips': '🔹 CHEST #1 — HYPERTROPHY\nLean forward for more chest activation. Lower until shoulders below elbows. Drive up explosively. Add weight if too easy.\n\n📌 *Opsi:*\n• Decline Bench Press\n• Machine Dip\n• Cable Press',
-            'foto': 'bench_press.jpg'
+            'tips': '🔹 CHEST #1 — HYPERTROPHY\nLean forward for more chest activation. Lower until shoulders below elbows. Drive up explosively.',
+            'foto': 'bench_press.jpg',
+            'opsi': [
+                ('Decline Bench Press', 'decline_bench_press.jpg'),
+                ('Machine Dip', 'machine_dip.jpg'),
+                ('Cable Press', 'cable_fly.jpg'),
+            ]
         },
         {
             'nama': 'Wide Grip Lat Pulldown',
             'detail': '4 sets × 8-12 reps',
             'muscle': 'Lats, Teres Major',
-            'tips': '🔹 BACK VERTICAL — HYPERTROPHY\nWide overhand grip. Pull bar to upper chest. Lean back slightly. Squeeze lats hard at bottom. Slow 3 sec return.\n\n📌 *Opsi:*\n• Pull Up\n• Close Grip Pulldown\n• Machine Pulldown',
-            'foto': 'pull_up.jpg'
+            'tips': '🔹 BACK VERTICAL — HYPERTROPHY\nWide overhand grip. Pull bar to upper chest. Lean back slightly. Squeeze lats hard at bottom.',
+            'foto': 'pull_up.jpg',
+            'opsi': [
+                ('Pull Up', 'pull_up.jpg'),
+                ('Close Grip Pulldown', 'neutral_grip_pulldown.jpg'),
+                ('Machine Pulldown', 'neutral_grip_pulldown.jpg'),
+            ]
         },
         {
             'nama': 'Machine Chest Press',
             'detail': '3 sets × 10-12 reps',
             'muscle': 'Chest, Triceps',
-            'tips': '🔹 CHEST #2 — HYPERTROPHY\nFocus on mind-muscle connection. Feel the stretch at bottom. Squeeze chest hard at top. Tempo 2-1-2.\n\n📌 *Opsi:*\n• Dumbbell Bench Press\n• Smith Press\n• Flat Barbell Press',
-            'foto': 'bench_press.jpg'
+            'tips': '🔹 CHEST #2 — HYPERTROPHY\nFocus on mind-muscle connection. Feel the stretch at bottom. Squeeze chest hard at top. Tempo 2-1-2.',
+            'foto': 'chest_press_machine.jpg',
+            'opsi': [
+                ('Dumbbell Bench Press', 'bench_press.jpg'),
+                ('Smith Press', 'smith_incline_press.jpg'),
+                ('Flat Barbell Press', 'bench_press.jpg'),
+            ]
         },
         {
             'nama': 'Single Arm Dumbbell Row',
             'detail': '3 sets × 10-12 reps',
             'muscle': 'Mid-Back, Lats, Biceps',
-            'tips': '🔹 BACK HORIZONTAL — HYPERTROPHY\nOne arm at a time. Pull elbow back and up. Squeeze shoulder blade at top. Full stretch at bottom. No rotation.\n\n📌 *Opsi:*\n• Machine Row\n• Meadows Row\n• Seated Cable Row',
-            'foto': 'bent_over_row.jpg'
+            'tips': '🔹 BACK HORIZONTAL — HYPERTROPHY\nOne arm at a time. Pull elbow back and up. Squeeze shoulder blade at top. Full stretch at bottom.',
+            'foto': 'bent_over_row.jpg',
+            'opsi': [
+                ('Machine Row', 'seated_cable_row.jpg'),
+                ('Meadows Row', 'bent_over_row.jpg'),
+                ('Seated Cable Row', 'seated_cable_row.jpg'),
+            ]
         },
         {
             'nama': 'Cable Lateral Raise',
             'detail': '4 sets × 12-15 reps',
             'muscle': 'Side Delts',
-            'tips': '🔹 SHOULDERS — HYPERTROPHY\nCable keeps tension throughout full range. Lead with elbow. Pause 1 sec at shoulder height. Lower slowly 3 sec.\n\n📌 *Opsi:*\n• Dumbbell Lateral Raise\n• Machine Lateral Raise',
-            'foto': 'lateral_raise.jpg'
+            'tips': '🔹 SHOULDERS — HYPERTROPHY\nCable keeps tension throughout full range. Lead with elbow. Pause 1 sec at shoulder height. Lower slowly 3 sec.',
+            'foto': 'lateral_raise.jpg',
+            'opsi': [
+                ('Dumbbell Lateral Raise', 'lateral_raise.jpg'),
+                ('Machine Lateral Raise', 'lateral_raise.jpg'),
+            ]
         },
         {
             'nama': 'Incline Dumbbell Curl',
             'detail': '3 sets × 10-12 reps',
             'muscle': 'Biceps Long Head',
-            'tips': '🔹 BICEPS — HYPERTROPHY\nIncline position stretches long head maximally. Let arms hang fully. Curl to full contraction. Slow 3 sec lowering.\n\n📌 *Opsi:*\n• Preacher Curl\n• Spider Curl\n• Bayesian Curl',
-            'foto': 'dumbbell_curl.jpg'
+            'tips': '🔹 BICEPS — HYPERTROPHY\nIncline position stretches long head maximally. Let arms hang fully. Curl to full contraction. Slow 3 sec lowering.',
+            'foto': 'dumbbell_curl.jpg',
+            'opsi': [
+                ('Preacher Curl', 'preacher_curl.jpg'),
+                ('Spider Curl', 'preacher_curl.jpg'),
+                ('Bayesian Curl', 'cable_curl.jpg'),
+            ]
         },
         {
             'nama': 'Rope Pushdown',
             'detail': '3 sets × 10-12 reps',
             'muscle': 'Triceps',
-            'tips': '🔹 TRICEPS — HYPERTROPHY\nUse rope attachment. Spread rope apart at bottom for full contraction. Elbows locked at sides. Slow 3 sec return.\n\n📌 *Opsi:*\n• Straight Bar Pushdown\n• V-Bar Pushdown',
-            'foto': 'tricep_pushdown.jpg'
+            'tips': '🔹 TRICEPS — HYPERTROPHY\nUse rope attachment. Spread rope apart at bottom for full contraction. Elbows locked at sides. Slow 3 sec return.',
+            'foto': 'tricep_pushdown.jpg',
+            'opsi': [
+                ('Straight Bar Pushdown', 'tricep_pushdown.jpg'),
+                ('V-Bar Pushdown', 'tricep_pushdown.jpg'),
+            ]
         },
     ],
     'Lower B': [
@@ -171,50 +266,80 @@ LATIHAN = {
             'nama': 'Hack Squat',
             'detail': '4 sets × 8-12 reps',
             'muscle': 'Quads, VMO',
-            'tips': '🔹 QUAD #1 — HYPERTROPHY\nFull depth, knees tracking over toes. Feet low and narrow for max quad stretch. Control the eccentric 3 sec.\n\n📌 *Opsi:*\n• Front Squat\n• Leg Press\n• Pendulum Squat',
-            'foto': 'hack_squat.jpg'
+            'tips': '🔹 QUAD #1 — HYPERTROPHY\nFull depth, knees tracking over toes. Feet low and narrow for max quad stretch. Control the eccentric 3 sec.',
+            'foto': 'hack_squat.jpg',
+            'opsi': [
+                ('Front Squat', 'front_squat.jpg'),
+                ('Leg Press', 'leg_press.jpg'),
+                ('Pendulum Squat', 'pendulum_squat.jpg'),
+            ]
         },
         {
             'nama': 'Hip Thrust',
             'detail': '4 sets × 8-12 reps',
             'muscle': 'Glute Max, Hamstrings',
-            'tips': '🔹 GLUTES — HYPERTROPHY\nUpper back on bench, bar on hips with pad. Drive hips up until body parallel. Squeeze glutes HARD at top — hold 2 sec. Chin tucked.\n\n📌 *Opsi:*\n• Glute Bridge\n• Smith Hip Thrust',
-            'foto': 'hip_thrust.jpg'
+            'tips': '🔹 GLUTES — HYPERTROPHY\nUpper back on bench, bar on hips with pad. Drive hips up until body parallel. Squeeze glutes HARD at top — hold 2 sec.',
+            'foto': 'hip_thrust.jpg',
+            'opsi': [
+                ('Glute Bridge', 'glute_bridge.jpg'),
+                ('Smith Hip Thrust', 'hip_thrust.jpg'),
+            ]
         },
         {
             'nama': 'Bulgarian Split Squat',
             'detail': '3 sets × 10-12 reps/leg',
             'muscle': 'Quads, Glutes (unilateral)',
-            'tips': '🔹 UNILATERAL\nRear foot elevated on bench. Drop straight down. Lean slightly forward for more glute activation. Control every rep.\n\n📌 *Opsi:*\n• Reverse Lunge\n• Step Up\n• Smith Split Squat',
-            'foto': 'bulgarian_split_squat.jpg'
+            'tips': '🔹 UNILATERAL\nRear foot elevated on bench. Drop straight down. Lean slightly forward for more glute activation. Control every rep.',
+            'foto': 'bulgarian_split_squat.jpg',
+            'opsi': [
+                ('Reverse Lunge', 'reverse_lunge.jpg'),
+                ('Step Up', 'step_up.jpg'),
+                ('Smith Split Squat', 'bulgarian_split_squat.jpg'),
+            ]
         },
         {
             'nama': 'Seated Leg Curl',
             'detail': '3 sets × 10-12 reps',
             'muscle': 'Hamstrings',
-            'tips': '🔹 HAMSTRINGS — HYPERTROPHY\nSeated position provides better hamstring stretch. Curl to full contraction. Squeeze 1 sec at top. Lower slowly 3 sec.\n\n📌 *Opsi:*\n• Lying Leg Curl\n• Nordic Curl',
-            'foto': 'leg_curl.jpg'
+            'tips': '🔹 HAMSTRINGS — HYPERTROPHY\nSeated position provides better hamstring stretch. Curl to full contraction. Squeeze 1 sec at top. Lower slowly 3 sec.',
+            'foto': 'leg_curl.jpg',
+            'opsi': [
+                ('Lying Leg Curl', 'leg_curl.jpg'),
+                ('Nordic Curl', 'nordic_curl.jpg'),
+            ]
         },
         {
             'nama': 'Leg Extension',
             'detail': '3 sets × 12-15 reps',
             'muscle': 'Quads, VMO',
-            'tips': '🔹 QUAD FINISHER\nExtend fully. Squeeze quads hard 1 sec at top. Lower slowly 3 sec. Keep back against pad throughout.\n\n📌 *Opsi:*\n• Single Leg Extension\n• Sissy Squat',
-            'foto': 'leg_press.jpg'
+            'tips': '🔹 QUAD FINISHER\nExtend fully. Squeeze quads hard 1 sec at top. Lower slowly 3 sec. Keep back against pad throughout.',
+            'foto': 'leg_press.jpg',
+            'opsi': [
+                ('Single Leg Extension', 'leg_press.jpg'),
+                ('Sissy Squat', 'sissy_squat.jpg'),
+            ]
         },
         {
             'nama': 'Seated Calf Raise',
             'detail': '4 sets × 15-20 reps',
             'muscle': 'Soleus',
-            'tips': '🔹 CALVES — HYPERTROPHY\nTargets soleus (deep calf muscle). Full stretch at bottom. Rise as high as possible. Hold 2 sec at top. Slow 3 sec lowering.\n\n📌 *Opsi:*\n• Single Leg Calf Raise\n• Smith Calf Raise',
-            'foto': 'calf_raise.jpg'
+            'tips': '🔹 CALVES — HYPERTROPHY\nTargets soleus. Full stretch at bottom. Rise as high as possible. Hold 2 sec at top. Slow 3 sec lowering.',
+            'foto': 'calf_raise.jpg',
+            'opsi': [
+                ('Single Leg Calf Raise', 'calf_raise.jpg'),
+                ('Smith Calf Raise', 'calf_raise.jpg'),
+            ]
         },
         {
             'nama': 'Hanging Leg Raise',
             'detail': '3 sets × 15 reps',
             'muscle': 'Lower Abs, Hip Flexors',
-            'tips': '🔹 CORE\nHang from bar, posterior pelvic tilt. Raise legs to 90° or higher. Avoid swinging. Lower with full control 3 sec.\n\n📌 *Opsi:*\n• Reverse Crunch\n• Captain Chair Raise',
-            'foto': 'hanging_leg_raise.jpg'
+            'tips': '🔹 CORE\nHang from bar, posterior pelvic tilt. Raise legs to 90° or higher. Avoid swinging. Lower with full control 3 sec.',
+            'foto': 'hanging_leg_raise.jpg',
+            'opsi': [
+                ('Reverse Crunch', 'cable_crunch.jpg'),
+                ('Captain Chair Raise', 'hanging_leg_raise.jpg'),
+            ]
         },
     ],
     'Full Body Pump': [
@@ -222,57 +347,89 @@ LATIHAN = {
             'nama': 'Smith Incline Press',
             'detail': '3 sets × 10-12 reps',
             'muscle': 'Upper Chest, Triceps',
-            'tips': '🔹 CHEST PUMP\nSmith machine allows constant tension. Lower slowly 3 sec. Squeeze upper chest at top.\n\n📌 *Opsi:*\n• Incline Dumbbell Press\n• Machine Incline Press',
-            'foto': 'incline_press.jpg'
+            'tips': '🔹 CHEST PUMP\nSmith machine allows constant tension. Lower slowly 3 sec. Squeeze upper chest at top.',
+            'foto': 'smith_incline_press.jpg',
+            'opsi': [
+                ('Incline Dumbbell Press', 'incline_press.jpg'),
+                ('Machine Incline Press', 'chest_press_machine.jpg'),
+            ]
         },
         {
             'nama': 'Chest Supported Row',
             'detail': '3 sets × 10-12 reps',
             'muscle': 'Mid-Back, Rhomboid',
-            'tips': '🔹 BACK PUMP\nChest on pad removes lower back fatigue. Pull elbows back and up. Squeeze shoulder blades hard at top.\n\n📌 *Opsi:*\n• T-Bar Row\n• Seated Cable Row',
-            'foto': 'seated_cable_row.jpg'
+            'tips': '🔹 BACK PUMP\nChest on pad removes lower back fatigue. Pull elbows back and up. Squeeze shoulder blades hard at top.',
+            'foto': 'seated_cable_row.jpg',
+            'opsi': [
+                ('T-Bar Row', 'bent_over_row.jpg'),
+                ('Seated Cable Row', 'seated_cable_row.jpg'),
+            ]
         },
         {
             'nama': 'Dumbbell Romanian Deadlift',
             'detail': '3 sets × 10-12 reps',
             'muscle': 'Hamstrings, Glutes',
-            'tips': '🔹 HAMSTRING PUMP\nDumbbells allow more range of motion. Push hips back. Feel maximum stretch at bottom. Squeeze glutes at top.\n\n📌 *Opsi:*\n• Stiff Leg Deadlift\n• Good Morning',
-            'foto': 'romanian_deadlift.jpg'
+            'tips': '🔹 HAMSTRING PUMP\nDumbbells allow more range of motion. Push hips back. Feel maximum stretch at bottom. Squeeze glutes at top.',
+            'foto': 'romanian_deadlift.jpg',
+            'opsi': [
+                ('Stiff Leg Deadlift', 'romanian_deadlift.jpg'),
+                ('Good Morning', 'good_morning.jpg'),
+            ]
         },
         {
             'nama': 'Neutral Grip Pulldown',
             'detail': '3 sets × 10-12 reps',
             'muscle': 'Lats, Biceps',
-            'tips': '🔹 LAT PUMP\nNeutral grip reduces bicep dominance. Pull bar to upper chest. Squeeze lats hard at bottom. Slow 3 sec return.\n\n📌 *Opsi:*\n• Pull Up\n• Close Grip Pulldown',
-            'foto': 'pull_up.jpg'
+            'tips': '🔹 LAT PUMP\nNeutral grip reduces bicep dominance. Pull bar to upper chest. Squeeze lats hard at bottom. Slow 3 sec return.',
+            'foto': 'neutral_grip_pulldown.jpg',
+            'opsi': [
+                ('Pull Up', 'pull_up.jpg'),
+                ('Close Grip Pulldown', 'neutral_grip_pulldown.jpg'),
+            ]
         },
         {
             'nama': 'Dumbbell Lateral Raise',
             'detail': '4 sets × 15-20 reps',
             'muscle': 'Side Delts',
-            'tips': '🔹 DELT PUMP — WEAK POINT\nLight weight, high reps. Lead with elbows. Pause 1 sec at shoulder height. Slow 3 sec lowering. Feel the burn!\n\n📌 *Opsi:*\n• Cable Lateral Raise\n• Machine Lateral Raise',
-            'foto': 'lateral_raise.jpg'
+            'tips': '🔹 DELT PUMP — WEAK POINT\nLight weight, high reps. Lead with elbows. Pause 1 sec at shoulder height. Slow 3 sec lowering.',
+            'foto': 'lateral_raise.jpg',
+            'opsi': [
+                ('Cable Lateral Raise', 'lateral_raise.jpg'),
+                ('Machine Lateral Raise', 'lateral_raise.jpg'),
+            ]
         },
         {
             'nama': 'Face Pull',
             'detail': '3 sets × 15-20 reps',
             'muscle': 'Rear Delt, Rotator Cuff, Trap',
-            'tips': '🔹 REAR DELT + SHOULDER HEALTH\nPull toward face, elbows at shoulder height. Rotate hands outward at end. Essential for posture and shoulder health.\n\n📌 *Opsi:*\n• Reverse Pec Deck\n• Bent Over Lateral Raise',
-            'foto': 'face_pull.jpg'
+            'tips': '🔹 REAR DELT + SHOULDER HEALTH\nPull toward face, elbows at shoulder height. Rotate hands outward at end. Essential for posture and shoulder health.',
+            'foto': 'face_pull.jpg',
+            'opsi': [
+                ('Reverse Pec Deck', 'reverse_pec_deck.jpg'),
+                ('Bent Over Lateral Raise', 'lateral_raise.jpg'),
+            ]
         },
         {
             'nama': 'Hammer Curl',
             'detail': '3 sets × 12-15 reps',
             'muscle': 'Brachialis, Biceps',
-            'tips': '🔹 BICEPS PUMP\nPalms facing each other throughout. Full range of motion. Slow 3 sec lowering. Alternate or together.\n\n📌 *Opsi:*\n• Rope Hammer Curl\n• Cross Body Hammer Curl',
-            'foto': 'hammer_curl.jpg'
+            'tips': '🔹 BICEPS PUMP\nPalms facing each other throughout. Full range of motion. Slow 3 sec lowering.',
+            'foto': 'hammer_curl.jpg',
+            'opsi': [
+                ('Rope Hammer Curl', 'rope_hammer_curl.jpg'),
+                ('Cross Body Hammer Curl', 'hammer_curl.jpg'),
+            ]
         },
         {
             'nama': 'Cable Pushdown',
             'detail': '3 sets × 12-15 reps',
             'muscle': 'Triceps',
-            'tips': '🔹 TRICEPS PUMP\nElbows locked at sides. Full extension at bottom. Squeeze triceps hard at lockout. Slow 3 sec return.\n\n📌 *Opsi:*\n• Rope Pushdown\n• V-Bar Pushdown',
-            'foto': 'tricep_pushdown.jpg'
+            'tips': '🔹 TRICEPS PUMP\nElbows locked at sides. Full extension at bottom. Squeeze triceps hard at lockout. Slow 3 sec return.',
+            'foto': 'tricep_pushdown.jpg',
+            'opsi': [
+                ('Rope Pushdown', 'tricep_pushdown.jpg'),
+                ('V-Bar Pushdown', 'tricep_pushdown.jpg'),
+            ]
         },
     ],
 }
@@ -313,6 +470,14 @@ def kirim_foto_lokal(path_foto, caption):
     except Exception as e:
         print(f'Error: {e}')
         return None
+
+def kirim_opsi(opsi_list, script_dir):
+    """Kirim foto opsi gerakan alternatif"""
+    for nama_opsi, foto_opsi in opsi_list:
+        foto_path = os.path.join(script_dir, foto_opsi)
+        caption = f'📌 *Opsi: {nama_opsi}*'
+        kirim_foto_lokal(foto_path, caption)
+        time.sleep(1.5)
 
 def get_jadwal_hari():
     now = datetime.datetime.utcnow() + datetime.timedelta(hours=9)
@@ -391,7 +556,11 @@ Come back stronger tomorrow! 💪"""
 {ex['tips']}"""
             foto_path = os.path.join(script_dir, ex['foto'])
             kirim_foto_lokal(foto_path, caption)
-            time.sleep(2)
+            time.sleep(1.5)
+
+            # Kirim foto opsi alternatif
+            if ex.get('opsi'):
+                kirim_opsi(ex['opsi'], script_dir)
 
     print(f"✅ Morning reminder sent — {nama}")
 
