@@ -49,7 +49,7 @@ LATIHAN = {
             'detail': '3 sets × semampunya',
             'muscle': 'Dada, Trisep, Core',
             'tips': '🔹 BODYWEIGHT\nHands slightly wider than shoulders. Lower chest to floor. Keep body in straight line throughout. Push up explosively.',
-            'foto': 'bench_press.jpg',
+            'foto': 'push_up.jpg',
             'opsi': [('Chest Press Machine', 'chest_press_machine.jpg')]
         },
         {
@@ -73,7 +73,7 @@ LATIHAN = {
             'detail': '3 sets × 20 reps',
             'muscle': 'Rectus Abdominis',
             'tips': '🔹 CORE\nHands behind head, knees bent. Curl shoulders off floor. Squeeze abs hard at top. Slow controlled return.',
-            'foto': 'cable_crunch.jpg',
+            'foto': 'crunch.jpg',
             'opsi': [('Cable Crunch', 'cable_crunch.jpg')]
         },
     ],
@@ -133,7 +133,7 @@ LATIHAN = {
             'detail': '3 sets × 8-12 reps',
             'muscle': 'All Delt Heads, Trisep',
             'tips': '🔹 SHOULDER #2\nDumbbells at ear level. Press up and slightly inward. Full lockout at top. Lower 3 sec.',
-            'foto': 'overhead_press.jpg',
+            'foto': 'dumbbell_shoulder_press.jpg',
             'opsi': [('Machine Shoulder Press', 'chest_press_machine.jpg')]
         },
         {
@@ -157,8 +157,8 @@ LATIHAN = {
             'detail': '3 sets × 12-15 reps',
             'muscle': 'Trapezius',
             'tips': '🔹 TRAP ISOLATION\nHold bar/dumbbells, shrug shoulders straight up toward ears. Hold 1 sec at top. Lower slowly — no rolling shoulders.',
-            'foto': 'overhead_press.jpg',
-            'opsi': [('Dumbbell Shrug', 'overhead_press.jpg')]
+            'foto': 'shrug.jpg',
+            'opsi': [('Dumbbell Shrug', 'shrug.jpg')]
         },
     ],
     'Kaki + Core': [
@@ -223,8 +223,8 @@ LATIHAN = {
             'detail': '3 sets × 20 reps',
             'muscle': 'Rectus Abdominis, Oblique',
             'tips': '🔹 CORE\nHands behind head, alternate bringing elbow to opposite knee. Keep core engaged throughout. Controlled pace — no rushing.',
-            'foto': 'cable_crunch.jpg',
-            'opsi': [('Mountain Climber', 'plank.jpg')]
+            'foto': 'bicycle_crunch.jpg',
+            'opsi': [('Mountain Climber', 'mountain_climber.jpg')]
         },
         {
             'nama': 'Plank',
@@ -266,7 +266,7 @@ LATIHAN = {
             'muscle': 'Triceps',
             'tips': '🔹 TRICEPS #1\nElbows locked at sides. Full extension at bottom. Squeeze triceps hard at lockout. Slow 3 sec return.',
             'foto': 'tricep_pushdown.jpg',
-            'opsi': [('Close Grip Bench Press', 'bench_press.jpg')]
+            'opsi': [('Close Grip Bench Press', 'close_grip_bench_press.jpg')]
         },
         {
             'nama': 'Overhead Tricep Extension',
@@ -281,7 +281,7 @@ LATIHAN = {
             'detail': '3 sets × semampunya',
             'muscle': 'Triceps, Dada Bawah',
             'tips': '🔹 COMPOUND FINISHER\nLean forward slightly for more chest, stay upright for more triceps. Lower until shoulders below elbows. Drive up explosively.',
-            'foto': 'machine_dip.jpg',
+            'foto': 'dips.jpg',
             'opsi': [('Assisted Dip Machine', 'machine_dip.jpg')]
         },
     ],
